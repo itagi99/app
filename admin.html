@@ -1,2 +1,51 @@
 <!DOCTYPE html>
-<html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Annapurna Mart</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-6">Admin Panel</h2>
+        <div class="mb-8">
+            <h3 class="text-xl font-bold mb-4">Add New Product</h3>
+            <form id="add-product-form">
+                <div class="mb-4">
+                    <label for="product-name" class="block text-gray-700">Product Name</label>
+                    <input type="text" id="product-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="product-description" class="block text-gray-700">Product Description</label>
+                    <textarea id="product-description" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="product-price" class="block text-gray-700">Product Price</label>
+                    <input type="number" id="product-price" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="product-category" class="block text-gray-700">Product Category</label>
+                    <input type="text" id="product-category" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="product-image" class="block text-gray-700">Product Image URL</label>
+                    <input type="text" id="product-image" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                </div>
+                <button type="submit" class="w-full bg-yellow-500 text-white py-2 rounded-lg font-bold hover:bg-yellow-600">Add Product</button>
+            </form>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold mb-4">Manage Orders</h3>
+            <div id="order-list" class="bg-white rounded-lg shadow-md p-4">
+                <!-- Orders will be listed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
